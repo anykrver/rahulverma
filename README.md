@@ -1,4 +1,4 @@
-# Rahul Verma - Portfolio Website
+# rahulverma - Portfolio Website
 
 A modern, responsive portfolio website built with React and Tailwind CSS, featuring a dark theme with neon gradient highlights.
 
