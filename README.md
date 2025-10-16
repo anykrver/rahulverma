@@ -124,7 +124,7 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 Rahul Verma - [rahulkrvermalnct@gmail.com](mailto:rahulkrvermalnct@gmail.com)
 
-Project Link: [https://github.com/rahulkr-verma/portfolio](https://github.com/rahulkr-verma/portfolio)
+Project Link: [https://github.com/rahulkr-verma/portfolio](https://github.com/anykrver/portfolio)
 
 ---
 
