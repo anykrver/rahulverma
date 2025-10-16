@@ -57,22 +57,22 @@ export default function ContactFormPopup({ open, onClose, onSubmit }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm transition-opacity animate-fade-in">
-      <div className="relative w-full max-w-lg mx-4 bg-white dark:bg-dark-bg rounded-2xl shadow-2xl p-8 animate-popup-open">
+      <div className="relative w-full max-w-lg mx-4 bg-white rounded-2xl shadow-2xl p-8 border border-gray-200 animate-popup-open">
         <button
-          className="absolute top-4 right-4 text-gray-400 hover:text-neon-pink text-2xl font-bold focus:outline-none"
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 text-2xl font-bold focus:outline-none"
           onClick={onClose}
           aria-label="Close contact form"
         >
           &times;
         </button>
-        <h2 className="text-2xl font-bold mb-6 text-center dark:text-white text-gray-900">Let's Get in Touch</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center text-gray-900">Let's Get in Touch</h2>
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
             <input
               type="text"
               name="name"
               placeholder="Full Name*"
-              className={`w-full px-5 py-3 rounded-lg border ${errors.name ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'} bg-gray-50 dark:bg-dark-card focus:outline-none focus:ring-2 focus:ring-neon-purple transition shadow-sm`}
+              className={`w-full px-5 py-3 rounded-lg border ${errors.name ? 'border-red-500' : 'border-gray-300'} bg-white focus:outline-none focus:ring-2 focus:ring-gray-900 transition shadow-sm`}
               value={form.name}
               onChange={handleChange}
               disabled={submitting}
@@ -84,7 +84,7 @@ export default function ContactFormPopup({ open, onClose, onSubmit }) {
               type="email"
               name="email"
               placeholder="Email Address*"
-              className={`w-full px-5 py-3 rounded-lg border ${errors.email ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'} bg-gray-50 dark:bg-dark-card focus:outline-none focus:ring-2 focus:ring-neon-purple transition shadow-sm`}
+              className={`w-full px-5 py-3 rounded-lg border ${errors.email ? 'border-red-500' : 'border-gray-300'} bg-white focus:outline-none focus:ring-2 focus:ring-gray-900 transition shadow-sm`}
               value={form.email}
               onChange={handleChange}
               disabled={submitting}
@@ -96,7 +96,7 @@ export default function ContactFormPopup({ open, onClose, onSubmit }) {
               type="tel"
               name="phone"
               placeholder="Phone Number*"
-              className={`w-full px-5 py-3 rounded-lg border ${errors.phone ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'} bg-gray-50 dark:bg-dark-card focus:outline-none focus:ring-2 focus:ring-neon-purple transition shadow-sm`}
+              className={`w-full px-5 py-3 rounded-lg border ${errors.phone ? 'border-red-500' : 'border-gray-300'} bg-white focus:outline-none focus:ring-2 focus:ring-gray-900 transition shadow-sm`}
               value={form.phone}
               onChange={handleChange}
               disabled={submitting}
@@ -108,7 +108,7 @@ export default function ContactFormPopup({ open, onClose, onSubmit }) {
               type="text"
               name="company"
               placeholder="Company/Website (optional)"
-              className="w-full px-5 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-dark-card focus:outline-none focus:ring-2 focus:ring-neon-purple transition shadow-sm"
+              className="w-full px-5 py-3 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-gray-900 transition shadow-sm"
               value={form.company}
               onChange={handleChange}
               disabled={submitting}
@@ -119,7 +119,7 @@ export default function ContactFormPopup({ open, onClose, onSubmit }) {
               name="message"
               placeholder="Project Details / Message*"
               rows={4}
-              className={`w-full px-5 py-3 rounded-lg border ${errors.message ? 'border-red-500' : 'border-gray-300 dark:border-gray-700'} bg-gray-50 dark:bg-dark-card focus:outline-none focus:ring-2 focus:ring-neon-purple transition shadow-sm resize-none`}
+              className={`w-full px-5 py-3 rounded-lg border ${errors.message ? 'border-red-500' : 'border-gray-300'} bg-white focus:outline-none focus:ring-2 focus:ring-gray-900 transition shadow-sm resize-none`}
               value={form.message}
               onChange={handleChange}
               disabled={submitting}
@@ -128,7 +128,7 @@ export default function ContactFormPopup({ open, onClose, onSubmit }) {
           </div>
           <button
             type="submit"
-            className="w-full btn-gradient py-3 rounded-lg text-white font-bold text-lg shadow-md transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-neon-purple focus:ring-offset-2"
+            className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-800 dark:to-gray-900 text-white rounded-xl hover:shadow-xl transition-all duration-300 group"
             disabled={submitting}
           >
             {submitting ? 'Sending...' : 'Send Message'}

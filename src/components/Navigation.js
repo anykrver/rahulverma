@@ -18,6 +18,7 @@ const Navigation = () => {
     { name: 'Home', href: '#home' },
     { name: 'Services', href: '#services' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Education', href: '#education' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' }
   ];
@@ -31,39 +32,54 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-dark-bg/98 backdrop-blur-md border-b border-gray-800' : 'bg-transparent'
-    }`}>
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+    // Updated navigation with rectangular shape (removed rounded-full)
+    <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-6 bg-transparent">
+      <div className="max-w-4xl mx-auto border border-white/10 rounded-xl px-6 py-3"
+        style={{ background: 'rgba(10, 11, 20, 0.9)', backdropFilter: 'blur(40px)', WebkitBackdropFilter: 'blur(40px)' }}>
+        <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <img src="https://i.pinimg.com/736x/37/01/8d/37018d100a9698e4b67fade656dee2cb.jpg" alt="Rahul Verma Logo" className="w-10 h-10 object-contain rounded-full" loading="lazy" />
-            <span className="text-xl font-bold dark:text-white text-gray-900">Rahul Verma</span>
+          <div className="flex items-center">
+            <span className="text-lg font-semibold tracking-tight text-white font-sans">Rahul Verma</span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <ul className="hidden md:flex items-center gap-1 text-sm font-medium text-white/60">
             {navItems.map((item, index) => (
-              <button
-                key={index}
-                onClick={() => scrollToSection(item.href)}
-                className="dark:text-gray-300 text-gray-700 hover:dark:text-white hover:text-gray-900 transition-colors duration-300 font-medium relative group"
-              >
-                {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-neon-purple to-neon-pink transition-all duration-300 group-hover:w-full"></span>
-              </button>
+              <li key={index}>
+                <button
+                  onClick={() => scrollToSection(item.href)}
+                  className="hover:text-white transition-colors duration-300 px-4 py-2 rounded-lg hover:bg-white/5 font-sans"
+                >
+                  {item.name}
+                </button>
+              </li>
             ))}
-          </div>
+          </ul>
 
-          {/* Theme Toggle and CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
-            <ThemeToggle />
+          {/* Action Buttons */}
+          <div className="flex items-center gap-2">
             <button 
               onClick={() => scrollToSection('#contact')}
-              className="btn-gradient px-6 py-3 rounded-full text-white font-semibold glow-effect"
+              className="hover:bg-white/5 p-2 rounded-lg transition-all duration-300 border border-white/5" 
+              style={{ background: 'rgba(255, 255, 255, 0.02)' }} 
+              aria-label="Account"
             >
-              Let's Talk
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 stroke-[1.5] text-white/60">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </button>
+
+            <button className="relative hover:bg-white/5 p-2 rounded-lg transition-all duration-300 border border-white/5" style={{ background: 'rgba(255, 255, 255, 0.02)' }} aria-label="Bookings">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 stroke-[1.5] text-white/60">
+                <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                <path d="M12 11h4"></path>
+                <path d="M12 16h4"></path>
+                <path d="M8 11h.01"></path>
+                <path d="M8 16h.01"></path>
+              </svg>
+              <span className="absolute -top-1 -right-1 w-4 h-4 bg-blue-500 text-white text-xs rounded-full flex items-center justify-center font-medium font-sans">1</span>
             </button>
           </div>
 
@@ -84,24 +100,24 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-dark-bg/98 backdrop-blur-md border-t border-gray-800">
-            <div className="px-6 py-4 space-y-4">
+          <div className="md:hidden mt-3 bg-black/30 backdrop-blur-md border border-white/10 rounded-xl">
+            <div className="px-4 py-3 space-y-3">
               {navItems.map((item, index) => (
                 <button
                   key={index}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left dark:text-gray-300 text-gray-700 hover:dark:text-white hover:text-gray-900 transition-colors duration-300 font-medium py-2"
+                  className="block w-full text-left text-white/80 hover:text-white transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/5"
                 >
                   {item.name}
                 </button>
               ))}
-              <div className="flex items-center justify-between pt-4">
-                <span className="dark:text-gray-300 text-gray-700 font-medium">Theme:</span>
+              <div className="flex items-center justify-between pt-2 border-t border-white/10">
+                <span className="text-white/80 font-medium">Theme:</span>
                 <ThemeToggle />
               </div>
               <button 
                 onClick={() => scrollToSection('#contact')}
-                className="btn-gradient w-full px-6 py-3 rounded-full text-white font-semibold mt-4"
+                className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-800 dark:to-gray-900 text-white rounded-xl hover:shadow-xl transition-all duration-300 group"
               >
                 Let's Talk
               </button>

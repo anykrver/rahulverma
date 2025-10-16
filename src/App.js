@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
-import Services from './components/Services';
+import SkillsSection from './components/SkillsSection';
 import Projects from './components/Projects';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -10,27 +10,26 @@ import './index.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-white">
       <Navigation />
       
       <main>
-        <section id="home">
+        <section id="home" className="bg-white">
           <Hero />
         </section>
+        {/* Skills & Expertise Section */}
+        <SkillsSection />
         
-        <section id="services">
-          <Services />
-        </section>
         
-        <section id="projects">
+        <section id="projects" className="bg-white">
           <Projects />
         </section>
         
-        <section id="about">
+        <section id="about" className="bg-white">
           <About />
         </section>
         
-        <section id="contact">
+        <section id="contact" className="bg-white">
           <Contact />
         </section>
       </main>
