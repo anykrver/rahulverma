@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
+import Services from './components/Services';
 import SkillsSection from './components/SkillsSection';
 import Projects from './components/Projects';
 import About from './components/About';
@@ -17,9 +18,14 @@ function App() {
         <section id="home" className="bg-white">
           <Hero />
         </section>
+        
+        {/* Services Section */}
+        <section id="services" className="bg-white">
+          <Services />
+        </section>
+        
         {/* Skills & Expertise Section */}
         <SkillsSection />
-        
         
         <section id="projects" className="bg-white">
           <Projects />

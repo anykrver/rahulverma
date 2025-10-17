@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ThemeToggle from './ThemeToggle';
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -8,7 +7,6 @@ const Navigation = () => {
     { name: 'Home', href: '#home' },
     { name: 'Services', href: '#services' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Education', href: '#education' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' }
   ];
@@ -33,7 +31,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center gap-1 text-sm font-medium text-white/60">
+          <ul className="hidden md:flex items-center gap-1 text-sm font-semibold text-white/60 leading-none tracking-tight">
             {navItems.map((item, index) => (
               <li key={index}>
                 <button
@@ -91,23 +89,19 @@ const Navigation = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-3 bg-black/30 backdrop-blur-md border border-white/10 rounded-xl">
-            <div className="px-4 py-3 space-y-3">
+            <div className="px-4 py-3 space-y-1">
               {navItems.map((item, index) => (
                 <button
                   key={index}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left text-white/80 hover:text-white transition-colors duration-300 font-medium py-2 px-3 rounded-lg hover:bg-white/5"
+                  className="block w-full text-left text-white/80 hover:text-white transition-colors duration-300 font-semibold py-3 px-3 rounded-lg hover:bg-white/5 leading-none tracking-tight"
                 >
                   {item.name}
                 </button>
               ))}
-              <div className="flex items-center justify-between pt-2 border-t border-white/10">
-                <span className="text-white/80 font-medium">Theme:</span>
-                <ThemeToggle />
-              </div>
               <button 
                 onClick={() => scrollToSection('#contact')}
-                className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-800 dark:to-gray-900 text-white rounded-xl hover:shadow-xl transition-all duration-300 group"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-gray-800 dark:to-gray-900 text-white rounded-lg hover:shadow-xl transition-all duration-300 group mt-2"
               >
                 Let's Talk
               </button>

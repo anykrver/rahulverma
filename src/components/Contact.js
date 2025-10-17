@@ -66,7 +66,7 @@ export default function Contact() {
           <div className="mb-4 inline-block px-4 py-2 bg-gradient-to-r from-[#14B8A6] to-purple-500 text-white rounded-full">
             Let's Connect
           </div>
-          <h2 className="text-4xl lg:text-6xl font-bold mb-8 gradient-text">
+          <h2 className="text-4xl lg:text-6xl font-semibold mb-8 gradient-text leading-none tracking-tight">
             Let's Build Something Great Together
           </h2>
           <p className="text-xl text-gray-600 mb-16 max-w-2xl mx-auto leading-relaxed">
@@ -84,7 +84,7 @@ export default function Contact() {
             className="space-y-6"
           >
             <div className="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-xl border border-gray-200 dark:border-gray-800">
-              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-semibold mb-6 leading-none tracking-tight">Contact Information</h3>
 
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
@@ -107,7 +107,7 @@ export default function Contact() {
                       <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">
                         {info.label}
                       </div>
-                      <div className="truncate group-hover:text-[#14B8A6] transition-colors">
+                      <div className="truncate group-hover:text-[#14B8A6] transition-colors font-semibold leading-none tracking-tight">
                         {info.value}
                       </div>
                     </div>
@@ -150,7 +150,7 @@ export default function Contact() {
               onSubmit={handleSubmit}
               className="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-xl border border-gray-200 dark:border-gray-800"
             >
-              <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
+              <h3 className="text-2xl font-semibold mb-6 leading-none tracking-tight">Send a Message</h3>
 
               <div className="space-y-5">
                 <div>
@@ -226,7 +226,7 @@ export default function Contact() {
           className="mt-16 bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 border border-gray-200 shadow-lg"
         >
           <div className="text-center">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Let's Connect</h3>
+            <h3 className="text-3xl font-semibold text-gray-900 mb-4 leading-none tracking-tight">Let's Connect</h3>
             <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
               Whether you have a project in mind, want to collaborate, or just want to say hello, 
               I'd love to hear from you. Let's create something amazing together!
@@ -236,14 +236,14 @@ export default function Contact() {
                 <svg className="w-6 h-6 text-[#14B8A6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span className="font-medium text-gray-700">Usually responds within 24 hours</span>
+                <span className="font-semibold text-gray-700 leading-none tracking-tight">Usually responds within 24 hours</span>
               </div>
               <div className="flex items-center space-x-3 bg-white/80 px-6 py-3 rounded-full shadow-sm">
                 <svg className="w-6 h-6 text-[#14B8A6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span className="font-medium text-gray-700">Based in Bhopal, India</span>
+                <span className="font-semibold text-gray-700 leading-none tracking-tight">Based in Bhopal, India</span>
               </div>
             </div>
           </div>

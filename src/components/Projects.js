@@ -51,7 +51,7 @@ export default function Projects() {
           transition={{ duration: 0.5 }}
           className="text-center mb-10"
         >
-          <h2 className="mb-4 text-3xl font-bold">Featured Projects</h2>
+          <h2 className="mb-4 text-3xl font-semibold gradient-text leading-none tracking-tight">Featured Projects</h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             A selection of projects that showcase my expertise in full-stack development,
             AI integration, and modern web technologies.
@@ -122,7 +122,7 @@ export default function Projects() {
                 </div>
                 
                 <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="mb-3 text-xl font-semibold group-hover:text-[#14B8A6] transition-colors">{project.title}</h3>
+                  <h3 className="mb-3 text-xl font-semibold group-hover:text-[#14B8A6] transition-colors leading-none tracking-tight">{project.title}</h3>
                   
                   {/* Stats */}
                   <div className="flex items-center gap-4 mb-3 text-sm text-gray-600 dark:text-gray-400">

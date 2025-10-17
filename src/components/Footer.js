@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="text-center">
             <div className="flex items-center justify-center space-x-2 mb-4">
               <img src="https://i.pinimg.com/736x/37/01/8d/37018d100a9698e4b67fade656dee2cb.jpg" alt="Rahul Verma Logo" className="w-12 h-12 object-contain rounded-full" loading="lazy" />
-              <span className="text-xl font-bold text-gray-900">Rahul Verma</span>
+              <span className="text-xl font-semibold text-gray-900 leading-none tracking-tight">Rahul Verma</span>
             </div>
             <p className="text-gray-600 mb-4">
               Digital Engineer & Designer passionate about creating innovative solutions that blend technology with creativity.
@@ -40,13 +40,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="text-center">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-4 leading-none tracking-tight">Quick Links</h3>
             <ul className="space-y-2">
               {['Home', 'Services', 'Projects', 'About', 'Contact'].map((link, index) => (
                 <li key={index} className="flex items-center justify-center gap-2">
                   <a
                     href={`#${link.toLowerCase()}`}
-                    className="text-gray-600 hover:text-gray-900 transition-colors duration-300 flex items-center gap-1"
+                    className="text-gray-600 hover:text-gray-900 transition-colors duration-300 flex items-center gap-1 font-semibold leading-none tracking-tight"
                   >
                     {link}
                     <svg className="w-3.5 h-3.5 text-gray-400 inline-block ml-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" /></svg>
@@ -58,11 +58,11 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="text-center">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Get in Touch</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-4 leading-none tracking-tight">Get in Touch</h3>
             <div className="space-y-2 text-gray-600">
-              <p>rahulkrvermalnct@gmail.com</p>
-              <p>Bhopal, India</p>
-              <p>LNCT Bhopal</p>
+              <p className="font-semibold leading-none tracking-tight">rahulkrvermalnct@gmail.com</p>
+              <p className="font-semibold leading-none tracking-tight">Bhopal, India</p>
+              <p className="font-semibold leading-none tracking-tight">LNCT Bhopal</p>
             </div>
           </div>
         </div>
@@ -70,10 +70,10 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-200 pt-8">
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-500 text-sm font-semibold leading-none tracking-tight">
               © {currentYear} Rahul Verma. All rights reserved.
             </p>
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-500 text-sm font-semibold leading-none tracking-tight">
               Built with React & Tailwind CSS
             </p>
           </div>

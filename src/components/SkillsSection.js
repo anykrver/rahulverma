@@ -85,7 +85,7 @@ export default function SkillsSection() {
             <Zap className="w-3 h-3 mr-2" />
             Technical Expertise
           </div>
-          <h2 className="text-4xl font-bold mb-4">Skills & Expertise</h2>
+          <h2 className="text-4xl font-semibold mb-4 gradient-text leading-none tracking-tight">Skills & Expertise</h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Tools, technologies & focus areas
           </p>
@@ -103,7 +103,7 @@ export default function SkillsSection() {
               {/* Section Header */}
               <div className="flex items-center gap-3 mb-6">
                 <section.icon className="w-5 h-5 text-gray-700 dark:text-gray-300" />
-                <h3 className="text-lg text-gray-900 dark:text-gray-100">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 leading-none tracking-tight">
                   {section.title}
                 </h3>
               </div>
@@ -125,7 +125,7 @@ export default function SkillsSection() {
                   >
                     <div className="bg-white dark:bg-gray-900 rounded-xl p-4 border border-gray-200 dark:border-gray-800 hover:border-[#14B8A6] hover:shadow-lg transition-all duration-300">
                       <SkillIcon icon={skill.icon} className="w-6 h-6 text-gray-700 dark:text-gray-300 mx-auto mb-2" />
-                      <div className="mb-2 text-center">{skill.name}</div>
+                      <div className="mb-2 text-center font-semibold leading-none tracking-tight">{skill.name}</div>
                       <div className={`text-xs text-center ${getLevelColor(skill.level)}`}>
                         {skill.level}
                       </div>
