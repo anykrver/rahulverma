@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import ThemeToggle from './ThemeToggle';
+import React, { useState, useEffect, useMemo } from 'react';
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
-  const navItems = [
+  const navItems = useMemo(() => [
     { name: 'Home', href: '#home' },
     { name: 'Services', href: '#services' },
     { name: 'Projects', href: '#projects' },
     { name: 'Education', href: '#education' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' }
-  ];
+  ], []);
 
   // Track scroll position to highlight active section
   useEffect(() => {
@@ -36,7 +35,7 @@ const Navigation = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [navItems]);
 
   const scrollToSection = (href) => {
     const element = document.querySelector(href);
