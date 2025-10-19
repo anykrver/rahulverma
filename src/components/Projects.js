@@ -26,9 +26,9 @@ export default function Projects() {
       forks: 8,
     },
     {
-      title: 'Smart Portfolio Generator',
-      description: 'AI-driven resume and portfolio builder that generates personalized content and designs based on user input and industry standards.',
-      image: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&h=400&fit=crop',
+      title: 'AI Image Enhancer',
+      description: 'AI-driven image enhancer that improves the quality and details of your images using deep learning techniques and machine learning algorithms.',
+      image: 'https://i.pinimg.com/736x/a5/66/58/a56658ba8f1a9b67e556d7fddc6df007.jpg?w=600&h=400&fit=crop',
       tech: ['Next.js', 'Firebase', 'TypeScript', 'Tailwind CSS'],
       github: 'https://github.com/rahulkr-verma',
       live: '#',
@@ -51,7 +51,7 @@ export default function Projects() {
           transition={{ duration: 0.5 }}
           className="text-center mb-10"
         >
-          <h2 className="mb-4 text-3xl font-semibold gradient-text leading-none tracking-tight">Featured Projects</h2>
+          <h2 className="mb-4 text-3xl font-bold">Featured Projects</h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             A selection of projects that showcase my expertise in full-stack development,
             AI integration, and modern web technologies.
@@ -122,7 +122,7 @@ export default function Projects() {
                 </div>
                 
                 <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="mb-3 text-xl font-semibold group-hover:text-[#14B8A6] transition-colors leading-none tracking-tight">{project.title}</h3>
+                  <h3 className="mb-3 text-xl font-semibold group-hover:text-[#14B8A6] transition-colors">{project.title}</h3>
                   
                   {/* Stats */}
                   <div className="flex items-center gap-4 mb-3 text-sm text-gray-600 dark:text-gray-400">

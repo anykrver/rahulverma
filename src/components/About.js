@@ -9,12 +9,12 @@ const About = () => {
   ];
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-24 px-6 relative overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Content */}
           <div>
-            <h2 className="text-4xl lg:text-5xl font-semibold mb-8 gradient-text leading-none tracking-tight">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-8 gradient-text">
               About Me
             </h2>
             
@@ -41,7 +41,7 @@ const About = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">ISRO Achievement</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">ISRO Achievement</h3>
                   <p className="text-gray-700">
                     Selected among the <span className="text-gray-900 font-semibold">top 100 students across India</span> by MyGov 
                     to visit ISRO and interact with top scientists. This experience deepened my passion for space technology 
@@ -76,7 +76,7 @@ const About = () => {
                   key={index}
                   className="text-center p-6 bg-gradient-to-br from-white to-gray-50 rounded-2xl border border-gray-200 hover:border-[#14B8A6] transition-all duration-300 shadow-sm"
                 >
-                  <div className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-2 leading-none tracking-tight">
+                  <div className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">
                     {stat.number}{stat.suffix}
                   </div>
                   <div className="text-gray-600 font-medium">
@@ -93,7 +93,7 @@ const About = () => {
                   <div className="w-32 h-32 bg-gradient-to-br from-[#14B8A6] to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
                     <span className="text-4xl font-bold text-white">RV</span>
                   </div>
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-2 leading-none tracking-tight">Rahul Verma</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Rahul Verma</h3>
                   <p className="text-gray-600">Digital Engineer & Designer</p>
                 </div>
               </div>
