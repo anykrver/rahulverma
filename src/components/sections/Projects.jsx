@@ -4,12 +4,12 @@ import { Github, ExternalLink, Star, GitFork } from 'lucide-react';
 export default function Projects() {
   const projects = [
     {
-      title: 'VisionFit AI',
-      description: 'AI-powered fitness tracking application using computer vision for real-time form analysis and workout guidance.',
+      title: 'StyllAi - Live Virtual Try-On',
+      description: 'AI-powered virtual try-on experience allowing users to visualize clothing items in real-time. Features live camera feed processing and realistic fabric draping simulation.',
       image: 'https://images.unsplash.com/photo-1576678927484-cc907957088c?w=600&h=400&fit=crop',
-      tech: ['React', 'Python', 'OpenCV', 'Tailwind CSS', 'TensorFlow'],
+      tech: ['React', 'Python', 'OpenCV', 'Tailwind CSS', 'Deep Learning'],
       github: 'https://github.com/anykrver/visionfit-ai',
-      live: '#',
+      live: 'https://styllai.vercel.app/',
       featured: true,
       stars: 12,
       forks: 2,
