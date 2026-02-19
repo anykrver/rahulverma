@@ -1,5 +1,6 @@
 import React from 'react';
 import { Code, Palette, Database } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Services = () => {
   const services = [
@@ -24,41 +25,52 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50 dark:bg-gray-900/50">
+    <section id="services" className="py-20 bg-black text-white font-mono">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-semibold gradient-text mb-4 leading-none tracking-tight">
-            My Services
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 leading-none tracking-tight">
+            Services
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            I offer a range of digital services to help bring your ideas to life with cutting-edge technology and creative design.
+          <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base">
+            Digital solutions crafted with precision and creativity.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -5 }}
+              className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-gray-800 hover:border-gray-600 transition-all duration-300"
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-[#14B8A6] to-purple-500 rounded-xl flex items-center justify-center mb-6">
-                <service.icon className="w-8 h-8 text-white" />
+              <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mb-6">
+                <service.icon className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-4 leading-none tracking-tight">{service.title}</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-6">
+              <h3 className="text-xl font-bold mb-4 leading-none tracking-tight">{service.title}</h3>
+              <p className="text-gray-400 mb-6 text-sm leading-relaxed">
                 {service.description}
               </p>
               <div className="flex flex-wrap gap-2">
                 {service.technologies.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium"
+                    className="px-2 py-1 bg-gray-800 text-gray-300 rounded text-xs font-medium border border-gray-700"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
