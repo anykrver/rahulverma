@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, Star, GitFork } from 'lucide-react';
 
@@ -20,7 +21,7 @@ export default function Projects() {
       image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&h=400&fit=crop',
       tech: ['React', 'Framer Motion', 'Tailwind CSS', 'Lucide React'],
       github: 'https://github.com/anykrver/rahulverma',
-      live: '#',
+      live: null,
       featured: true,
       stars: 5,
       forks: 1,
@@ -31,7 +32,7 @@ export default function Projects() {
       image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&h=400&fit=crop',
       tech: ['Python', 'Deep Learning', 'React', 'Flask', 'PyTorch'],
       github: 'https://github.com/anykrver/AI-image-enhancer',
-      live: '#',
+      live: null,
       featured: true, // Marking as featured based on user interest
       stars: 8,
       forks: 3,
@@ -137,15 +138,17 @@ export default function Projects() {
                       <Github className="w-4 h-4" />
                       Code
                     </a>
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm font-medium text-gray-400 hover:text-white transition-colors flex items-center gap-2"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
-                    </a>
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-medium text-gray-400 hover:text-white transition-colors flex items-center gap-2"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Live Demo
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

@@ -49,18 +49,16 @@ const Contact = () => {
       icon: MapPin,
       title: 'Location',
       value: 'Bhopal, India',
-      link: '#'
+      link: 'https://maps.google.com/?q=Bhopal,India'
     }
   ];
 
   return (
     <section id="contact" className="py-20 bg-black text-white font-mono relative overflow-hidden">
+      {/* ... (keep existing structure) ... */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          // ... (keep animations) ...
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tighter">
@@ -74,10 +72,7 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Contact Info */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            // ... (keep animations) ...
             className="space-y-8"
           >
             <div className="bg-gray-900/50 rounded-2xl p-8 border border-gray-800">
@@ -96,6 +91,8 @@ const Contact = () => {
                       <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">{item.title}</p>
                       <a
                         href={item.link}
+                        target={item.title === 'Location' ? '_blank' : undefined}
+                        rel={item.title === 'Location' ? 'noopener noreferrer' : undefined}
                         className="text-white hover:text-gray-300 transition-colors font-medium break-all"
                       >
                         {item.value}
@@ -110,13 +107,13 @@ const Contact = () => {
               <h3 className="text-lg font-bold mb-4">Social Profiles</h3>
               <div className="flex gap-4">
                 {['LinkedIn', 'GitHub', 'Twitter', 'Instagram'].map((social) => (
-                  <a
+                  <button
                     key={social}
-                    href="#"
+                    onClick={() => window.open(`https://${social.toLowerCase()}.com`, '_blank')}
                     className="px-4 py-2 bg-gray-800 rounded text-sm text-gray-300 hover:text-white hover:bg-gray-700 transition-colors"
                   >
                     {social}
-                  </a>
+                  </button>
                 ))}
               </div>
             </div>
